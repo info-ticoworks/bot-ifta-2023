@@ -3,7 +3,7 @@ const { createReadStream, existsSync } = require('fs')
 const { bgYellow, cyan, yellow } = require('kleur')
 const polka = require('polka')
 
-const HTTP_PORT = process.env.PORT || 3004
+const HTTP_PORT = process.env.PORT || 3000
 const QR_FILE = process.env.QR_FILE ?? 'bot'
 const PUBLIC_URL = process.env.PUBLIC_URL ?? process.env.RAILWAY_STATIC_URL ?? 'http://localhost'
 
@@ -12,7 +12,7 @@ const serve = require('serve-static')(dir)
 
 /**
  * Iniciamos Portal WEB para escanear QR
- * @param {port:3004, publicSite:'http://mistio.com', qrFile:'qr.png', dir:__dirname}
+ * @param {port:3000, publicSite:'http://mistio.com', qrFile:'qr.png', dir:__dirname}
  */
 const start = (args) => {
     const injectArgs = {
